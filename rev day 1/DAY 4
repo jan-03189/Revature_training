@@ -1,1 +1,256 @@
 
+filter,reduce and map methods in array
+
+
+//FOR EACHLOOP
+var nums=[45,99,7,6,5,4];
+nums.forEach(function(element,index,array){
+    console.log(`${element}<==>${index}<==>${array}`);
+});
+
+// //for of method
+
+var evenNum=[];
+for(var ele of nums){
+    if(ele%2==0){
+        evenNum.push(ele);
+    }
+}
+console.log(evenNum);
+console.log(nums);
+
+
+// //filter method
+var numbers=[67,9,8,55,42,6];
+var evenNum=numbers.filter((ele)=>{
+return ele%2==0;
+
+
+})
+console.log(evenNum);
+console.log(numbers);
+
+// //OBJECTS
+
+var item1={
+    name:"dress",
+    price:600,
+    color:"pink",
+}
+console.log(item1["price"]);
+console.log(item1);
+
+for (var key in item1){
+    console.log(key);
+}
+console.log(item1.key);
+console.log(item1["name"]);
+item1.size="M";
+console.log(item1);
+
+
+
+var item2={
+    name:"shirt",
+    size:"M",
+    price:990,
+}
+var item3={
+    name:"kurti",
+    size:"M",
+    price:"700",
+}
+
+var shopItems=[item1,item2,item3];
+console.log(shopItems);
+
+
+// //get item belongs to clothes
+
+var sizeitem=shopItems.filter((element,index,array)=>{
+    return ele.size=="M";
+});
+console.log(sizeitem);
+
+
+
+let num=[6,0,9,78,667];
+var newArray=[];
+for(let ele of num){
+    ele+=2;
+    newArray.push(ele);
+}
+console.log(num);
+console.log(newArray);
+
+
+// //MAP
+
+var arr=[2,9,77,5,6];
+var newarr=num.map((ele,index,array)=>{
+    console.log(ele);
+    ele=ele+2;
+    return ele;
+
+})
+console.log(arr);
+console.log(newarr);
+
+
+
+var numbers=[1,2,3,4,5];
+var total=numbers.reduce((acc,ele,index,array)=>{
+    console.log(`acc:${acc}<==>ele:${ele}<==>index:${index}`);
+    return acc-ele;
+});
+console.log(total);
+
+
+
+var shopItems=[it1,it2,it3];
+var it1={
+    name:"shorts",
+    price:500,
+    category:"clothes"
+}
+var it2={name:"kurti",price:700,category:"clothes"}
+
+var it3={name:"shoe",price:1500,category:"footwear"}
+
+const newValue=shopItems.reduce((acc,currentItem)=>{
+    console.log(acc)
+    console.log(currentItem)
+    return acc+currentItem.price
+   
+},0);
+console.log(newValue);
+
+var newVal=shopItems.reduce((acc,currentItem)=>{
+    console.log(acc);
+    console.log(currentItem);
+    return acc+currentItem.price,0;
+
+
+})
+console.log(shopItems);
+
+
+OBJECT
+
+let text="abcdefghijklmnopqrstuvwxyz";
+let length=text.length;
+console.log(length);
+
+
+// //replace "training" with "journey" in "I am enjoying my training". and store in a variable.
+ let str="Iam enjoying my training";
+ let newText=str.replace("training","journey");
+ console.log(newText);
+
+
+//  //extract string from index 0 to 4 from the string "I am enjoying my training". and store in a variable.
+
+ var string6="iam enjoying my training";
+ let substring=string6.substring(0,5);
+ console.log(substring);
+
+
+ //- Print all the characters of a string using for loop.
+//can use charAt() or str[];
+
+let str3="revature";
+for(let i=0;i<str3.length;i++){
+    // console.log(str3.charAt(i));
+    console.log(str3[i]);
+
+//}
+ 
+//1. Create a JavaScript program that manages a simple student information system. The program should have the following functionalities:
+ 
+// Create an object called student with the following properties:
+ 
+// Name (string)
+// Age (number)
+// Grade (string)
+ 
+// Implement a method within the student object called displayInfo that displays the student's name, age, and grade.
+ 
+// Prompt the user to enter the student's name, age, and grade, and store the values in the student object.
+ 
+// Call the displayInfo method to display the student's information.
+
+let student={
+    name:"",age:0,grade:"",
+
+    displayInfo:function(){
+      console.log("name:"+this.name); 
+     console.log("age:"+this.age); 
+console.log("grade:"+this.grade);
+    }
+};
+ student.name=prompt("enter students name:");
+ student.age=prompt("enter students age");
+ student.grade=prompt("enter students grade");
+
+ 
+
+ student.displayInfo();
+
+//location of m
+ let Str1="i love my training";
+ let loc=Str1.indexOf("m")
+ console.log("location of m is:"+loc);
+
+
+ const str4 = "Hello there I am jack";
+ let arr=str4.split(" ");
+ console.log(arr);
+
+
+ var string5="iam janani girl";
+ var rem="i";
+ var modified=string5.split(rem).join("");
+ console.log(modified);
+
+let string="i love my training";
+let loc=string.indexOf("my");
+console.log(loc);
+
+let string7="a,b,c";
+let arr=string7.split(",");
+console.log(arr);
+
+
+let string8="   this is my galleryyy       ";
+
+let space= string8.replace(/\s/g,'');
+console.log(space);
+
+//Add two strings using the concat() function. and print them. make sure there is space between concatenated elements.
+
+let string1="janani";
+let string2="hariprasath";
+let string=string1.concat( " ",string2);
+console.log(string);
+
+
+
+
+var numbers=[2,3,4,8,7];
+var sum=numbers.reduce((accumulator,currentValue)=>accumulator*currentValue);
+
+console.log(sum);
+
+const fruits=["banana","orange","kiwi","coco"];
+for(let elements of fruits){
+    console.log(elements);
+}
+
+
+
+
+
+
+
+
+
